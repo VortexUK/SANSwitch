@@ -1,0 +1,4 @@
+#!groovy
+library 'winengSharedLib'
+
+powershellModule {}
