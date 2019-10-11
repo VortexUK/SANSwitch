@@ -12,9 +12,9 @@
 [System.String]$LocalDC = "dc.$LocalSite.sites.$DNSDomainName"
 #endregion
 #region Global Variables
-[System.String]$SANSWitchFormat = '^SAN(SW|AG)'
+[System.String]$SANSWitchFormat = '^SAN(SW|AG)' # Change this to whatever you want so that it will only accept SANSwitch names
 [System.String]$IPFormat = '\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
-[System.String]$SNMPCommunityString
+[System.String]$SNMPCommunityString = 'Setme' # Set this to your public community string
 #endregion
 #region Internal Variables
 [System.Management.Automation.PSObject]$Oids = New-Object -TypeName System.Management.Automation.PSObject -Property @{
