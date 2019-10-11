@@ -9,7 +9,6 @@
 [System.String]$DefaultNamingContext = Get-ADRootDSE | Select-Object -ExpandProperty defaultNamingContext
 [System.String]$DNSDomainName = (Get-ADObject -Identity $DefaultNamingContext -Properties canonicalName).canonicalName.TrimEnd('/')
 [System.String]$LocalSite = [System.DirectoryServices.ActiveDirectory.ActiveDirectorySite]::GetComputerSite().Name
-[System.String]$LocalDC = "dc.$LocalSite.sites.$DNSDomainName"
 #endregion
 #region Global Variables
 [System.String]$SANSWitchFormat = '^SAN(SW|AG)' # Change this to whatever you want so that it will only accept SANSwitch names
