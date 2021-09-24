@@ -6,7 +6,7 @@ ForEach-Object -Process { . $_.FullName }
 #region Required Variables for testing
 [System.String]$SANSWitchFormat = '^SAN(SW|AG)'
 [System.String]$IPFormat = '\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
-[System.String]$SNMPCommunityString = 'dpfmro'
+[System.String]$SNMPCommunityString = ''
 #endregion
 #region Internal Variables
 [System.Management.Automation.PSObject]$Oids = New-Object -TypeName System.Management.Automation.PSObject -Property @{
